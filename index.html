@@ -4,7 +4,7 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>EURO-FIX — Site en construction</title>
-  <meta name="description" content="EURO-FIX — Programmation, électronique et clés automobile. Service mobile — Membre NASTF VSP. Sainte‑Marie (QC)."/>
+  <meta name="description" content="EURO-FIX — Programmation, électronique et clés automobile. Service mobile — Membre NASTF — Sainte-Marie (QC)."/>
   <style>
     :root{ --bg:#0b0b0d; --fg:#fff; --muted:#bdbdbd; --accent:#c60000; }
     *{box-sizing:border-box}
@@ -14,11 +14,11 @@
     .card{width:min(980px,100%);background:rgba(0,0,0,.45);border:1px solid #1e1e22;
           border-radius:18px;box-shadow:0 8px 30px rgba(0,0,0,.35);padding:30px}
     .center{display:flex;flex-direction:column;align-items:center;text-align:center}
-    .logo{width:min(360px,80%);height:auto;margin-bottom:8px}
+    .logo{width:min(480px,96%);height:auto;margin-bottom:10px}
     h1{margin:0;font-size:clamp(28px,6vw,56px);letter-spacing:.5px;font-weight:900}
     .euro{color:var(--accent)} .fix{color:#fff}
     .slogan{margin-top:8px;font-weight:600}
-    .meta{margin-top:10px;color:var(--muted)}
+    .meta{margin-top:6px;color:#d9d9d9}
     .cta{margin-top:22px;display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
     .btn{appearance:none;border:0;border-radius:12px;padding:12px 16px;font-weight:700;
          text-decoration:none;display:inline-flex;align-items:center;gap:8px;
@@ -31,16 +31,9 @@
 <body>
   <main class="card">
     <section class="center" aria-label="En-tête EURO-FIX">
-      <img src="assets/logo.png" alt="EURO-FIX logo" class="logo"/>
-      <h1><span class="euro">EURO</span>-<span class="fix">FIX</span></h1>
-      <div class="slogan">Programmation, électronique et clés automobile</div>
-      <div class="meta">Service mobile et en garage • Membre NASTF VSP • Sainte‑Marie (QC)</div>
-      <nav class="cta" aria-label="Actions">
-        <a class="btn primary" href="tel:14188828319">📞 Appeler maintenant</a>
-        <a class="btn" href="mailto:garageeurofix@gmail.com">✉️ Écrire par courriel</a>
-      </nav>
-    </section>
-    <footer>© EURO-FIX — Site officiel en construction.</footer>
-  </main>
-</body>
-</html>
+      <!-- LOGO SVG INTÉGRÉ -->
+      <svg class="logo" viewBox="0 0 1400 540" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="EURO-FIX logo">
+        <defs>
+          <style>
+            .euro { fill:#c60000; font: 700 240px/1 Arial, DejaVu Sans, sans-serif; }
+            .fix  { fill:#ffffff; font: 700 240px/1 Arial, 
