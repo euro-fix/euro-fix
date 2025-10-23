@@ -5,35 +5,63 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>EURO-FIX — Programmation, électronique et clés automobile</title>
   <meta name="description" content="EURO-FIX — Programmation, électronique et clés automobile. Service mobile — Membre NASTF — Sainte-Marie (QC)."/>
+
   <style>
     :root{
-      --bg:#0b0b0d; --fg:#ffffff; --muted:#bdbdbd; --accent:#c60000;
+      --bg:#0b0b0d; --fg:#ffffff; --muted:#cfcfcf; --accent:#c60000;
     }
     *{box-sizing:border-box}
+    html,body{height:100%}
     body{
-      margin:0;min-height:100vh;display:grid;place-items:center;padding:24px;
-      background:radial-gradient(1200px 600px at 50% -200px,#161618,var(--bg));
-      color:var(--fg);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif
+      margin:0;
+      color:var(--fg);
+      background:#0b0b0d; /* fond plein, sans gradient pour éviter les liserés */
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+      display:flex;flex-direction:column;
     }
-    a{color:#fff}
-    .card{
-      width:min(980px,100%);background:rgba(0,0,0,.45);
-      border:1px solid #1e1e22;border-radius:18px;box-shadow:0 8px 30px rgba(0,0,0,.35);
-      padding:32px 28px 28px;
+
+    /* en-tête simple, sans cadre */
+    header{
+      width:100%;
+      padding:12px 16px;
+      display:flex;
+      justify-content:center;
+      gap:12px;
     }
-    nav.top{display:flex;gap:14px;justify-content:center;margin-bottom:14px;flex-wrap:wrap}
-    .link{padding:10px 14px;border-radius:10px;background:#1d1d22;text-decoration:none}
+    .link{
+      padding:10px 14px;border-radius:10px;
+      background:#1d1d22;color:#fff;text-decoration:none;
+    }
     .link:hover{background:#24242a}
-    .center{display:flex;flex-direction:column;align-items:center;text-align:center}
-    /* === LOGO (image) === */
+
+    /* zone principale plein écran SANS cadre */
+    main{
+      width:100%;
+      flex:1;
+      display:flex;align-items:center;justify-content:center;
+      padding:20px 16px 28px; /* un peu d’air mais PAS de bordure */
+    }
+
+    .center{
+      width:100%;
+      max-width:980px;
+      text-align:center;
+      margin-inline:auto;
+    }
+
+    /* LOGO image — grand format */
     .logo{
-      width:min(980px,96%);  /* GRAND comme demandé */
-      height:auto; display:block; margin:10px auto 18px;
+      width:min(980px,96%);
+      height:auto;
+      display:block;
+      margin:10px auto 18px;
       image-rendering:auto;
     }
-    .slogan{margin-top:6px;font-weight:700;letter-spacing:.2px;font-size:clamp(16px,2.2vw,20px)}
+
+    .slogan{margin-top:6px;font-weight:800;letter-spacing:.2px;font-size:clamp(16px,2.2vw,20px)}
     .meta{margin-top:6px;color:#d9d9d9;font-size:clamp(14px,2vw,18px)}
-    .cta{margin-top:20px;display:flex;flex-wrap:wrap;gap:12px;justify-content:center;position:relative;z-index:5}
+
+    .cta{margin-top:20px;display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
     .btn{
       appearance:none;border:0;border-radius:12px;padding:12px 16px;font-weight:800;
       text-decoration:none;display:inline-flex;align-items:center;gap:8px;background:#1d1d22;color:#fff;
@@ -41,18 +69,27 @@
     }
     .btn:hover{background:#24242a;transform:translateY(-1px)}
     .btn.primary{background:var(--accent)} .btn.primary:hover{background:#a40000}
-    footer{margin-top:20px;color:#8d8d8d;font-size:12px;text-align:center}
+
+    footer{
+      width:100%;text-align:center;color:#9a9a9a;font-size:12px;
+      padding:16px 8px 24px;
+    }
+
+    /* Optionnel : pour les très petits écrans, on resserre un peu le logo */
+    @media (max-width:380px){
+      .logo{width:92%}
+    }
   </style>
 </head>
 <body>
-  <main class="card">
-    <nav class="top">
-      <a class="link" href="./services.html">Services</a>
-      <a class="link" href="./contact.html">Contact & Localisation</a>
-    </nav>
+  <header>
+    <a class="link" href="./services.html">Services</a>
+    <a class="link" href="./contact.html">Contact & Localisation</a>
+  </header>
 
+  <main>
     <section class="center">
-      <!-- LOGO IMAGE (ton fichier déjà uploadé) -->
+      <!-- LOGO : utilise ton image existante -->
       <img src="./assets/logo.png" alt="EURO-FIX — Logo officiel EUROFIX" class="logo"/>
 
       <div class="slogan">Programmation, électronique et clés automobile</div>
@@ -70,8 +107,8 @@
         <a href="mailto:garageeurofix@gmail.com" style="text-decoration:underline">garageeurofix@gmail.com</a>.
       </div>
     </section>
-
-    <footer>© EURO-FIX — Site officiel.</footer>
   </main>
+
+  <footer>© EURO-FIX — Site officiel.</footer>
 </body>
 </html>
